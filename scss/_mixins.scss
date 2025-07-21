@@ -1,0 +1,14 @@
+@use "variables" as *;
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: $bp-mobile) {
+      @content;
+    }
+  }
+  @if $breakpoint == tablet {
+    @media (max-width: $bp-tablet) {
+      @content;
+    }
+  }
+}

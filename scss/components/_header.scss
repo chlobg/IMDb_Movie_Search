@@ -1,0 +1,27 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.header {
+  background-color: $color-black;
+  padding: 1rem;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include respond(mobile) {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+
+  &__logo {
+    margin-left: 59px;
+    height: 48px;
+
+    @include respond(mobile) {
+      height: 30px;
+    }
+  }
+}

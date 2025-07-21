@@ -1,0 +1,226 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  background: #424242;
+  color: #fff;
+}
+@media (max-width: 430px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.header {
+  background-color: #000;
+  padding: 1rem;
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 430px) {
+  .header__container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+.header__logo {
+  margin-left: 59px;
+  height: 48px;
+}
+@media (max-width: 430px) {
+  .header__logo {
+    height: 30px;
+  }
+}
+
+.main {
+  padding-top: 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.search__container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+}
+
+.search {
+  border: 1px solid #f6c700;
+  display: flex;
+  padding: 2px 4px;
+  align-items: center;
+  background: #000;
+  align-items: center;
+  justify-content: center;
+}
+.search__input {
+  color: #fff;
+  cursor: text;
+  display: inline-flex;
+  position: relative;
+  font-size: 1rem;
+  box-sizing: border-box;
+  align-items: center;
+  font-family: "Comic Neue", cursive;
+  font-weight: 400;
+  line-height: 1.1876em;
+  background-color: #000;
+  border: none;
+}
+.search__input::placeholder {
+  font: inherit;
+  font-family: "Comic Neue", cursive;
+  color: #aaa;
+  width: 100%;
+  border: 0;
+  height: 1.1876em;
+  margin: 0;
+  display: block;
+  padding: 6px 0 7px;
+  min-width: 0;
+  background: none;
+  box-sizing: content-box;
+  animation-name: mui-auto-fill-cancel;
+  letter-spacing: inherit;
+  animation-duration: 10ms;
+  -webkit-tap-highlight-color: transparent;
+}
+.search__input:focus {
+  outline: none;
+}
+.search__btn {
+  background: #000;
+  border: none;
+  padding: 0 0.75rem;
+  cursor: pointer;
+}
+.search__icon {
+  fill: #fff;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  font-size: 1.5rem;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  flex-shrink: 0;
+  user-select: none;
+}
+@media (max-width: 1024px) {
+  .search {
+    width: 300px;
+  }
+}
+@media (max-width: 430px) {
+  .search {
+    width: 90%;
+    font-size: 0.9rem;
+  }
+  .search__icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.movie {
+  padding: 2rem;
+}
+.movie__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+@media (max-width: 1024px) {
+  .movie {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 430px) {
+  .movie {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0.5rem;
+  }
+}
+.movie__card {
+  background: #424242;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 1rem;
+  color: #fff;
+}
+.movie__poster {
+  border-radius: 4px;
+}
+.movie__title {
+  margin: 0.5rem 0;
+}
+.movie__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.movie__no-result {
+  text-align: center;
+  color: #fff;
+  margin-top: 2rem;
+  font-family: "Comic Neue", cursive;
+}
+.movie__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+  color: #fff;
+  font-size: 0.9rem;
+}
+.movie__footer .movie__year {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-style: italic;
+  color: #fff;
+}
+.movie__footer .movie__year svg {
+  fill: #fff;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+.movie__footer .movie__fav {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.movie__footer .movie__fav svg {
+  fill: #fff;
+  width: 22px;
+  height: 22px;
+  transition: fill 0.3s ease;
+}
+
+.main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+}
+@media (max-width: 430px) {
+  .main .main {
+    padding: 0.5rem;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

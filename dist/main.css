@@ -1,0 +1,156 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  background: #424242;
+  color: #fff;
+}
+@media (max-width: 430px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.header {
+  background-color: #000;
+  padding: 1rem;
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  height: 40px;
+}
+
+.main {
+  padding-top: 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.search__container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.search {
+  border: 1px solid #f6c700;
+  display: flex;
+  padding: 2px 4px;
+  align-items: center;
+  background: #000;
+  align-items: center;
+}
+.search__input {
+  color: #fff;
+  cursor: text;
+  display: inline-flex;
+  position: relative;
+  font-size: 1rem;
+  box-sizing: border-box;
+  align-items: center;
+  font-family: Comic Neue;
+  font-weight: 400;
+  line-height: 1.1876em;
+  background-color: #000;
+  border: none;
+}
+.search__input::placeholder {
+  font: inherit;
+  font-family: "Comic Neue";
+  color: #fff;
+  width: 100%;
+  border: 0;
+  height: 1.1876em;
+  margin: 0;
+  display: block;
+  padding: 6px 0 7px;
+  min-width: 0;
+  background: none;
+  box-sizing: content-box;
+  animation-name: mui-auto-fill-cancel;
+  letter-spacing: inherit;
+  animation-duration: 10ms;
+  -webkit-tap-highlight-color: transparent;
+}
+.search__input:focus {
+  outline: none;
+}
+.search__btn {
+  background: #000;
+  border: none;
+  padding: 0 0.75rem;
+  cursor: pointer;
+}
+.search__icon {
+  fill: #fff;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  font-size: 1.5rem;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  flex-shrink: 0;
+  user-select: none;
+}
+@media (max-width: 430px) {
+  .search {
+    width: 140px;
+  }
+}
+
+.movie {
+  padding: 2rem;
+}
+.movie__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+.movie__card {
+  background: #424242;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 1rem;
+  color: #fff;
+}
+.movie__poster {
+  border-radius: 4px;
+}
+.movie__title {
+  margin: 0.5rem 0;
+}
+.movie__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.movie__no-result {
+  text-align: center;
+  color: #fff;
+  margin-top: 2rem;
+}
+
+.main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+}
+
+@media (max-width: 430px) {
+  .main {
+    padding: 0.5rem;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

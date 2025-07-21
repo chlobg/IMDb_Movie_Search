@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IMDb Movie Search</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body class="app">
+    <header class="header">
+      <div class="header__container">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/6/69/IMDB_Logo_2016.svg"
+          alt="IMDb Logo"
+          class="header__logo"
+        />
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="search__container">
+        <div class="search">
+          <input
+            type="text"
+            id="searchInput"
+            class="search__input"
+            placeholder="Search for a movie"
+          />
+
+          <button id="searchBtn" class="search__btn">
+            <svg class="search__icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 
+           16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16
+           c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99
+           L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5
+           S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <section class="movie">
+        <div id="movieList" class="movie__grid"></div>
+        <p id="noResult" class="movie__no-result">Movie not found!</p>
+      </section>
+    </main>
+
+    <script src="js/integration-movieapp.js"></script>
+  </body>
+</html>

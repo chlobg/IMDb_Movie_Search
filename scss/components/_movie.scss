@@ -1,0 +1,89 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.movie {
+  padding: 2rem;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+  @include respond(tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond(mobile) {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0.5rem;
+  }
+
+  &__card {
+    background: $color-brown;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 1rem;
+    color: $color-white;
+  }
+
+  &__poster {
+    border-radius: 4px;
+  }
+
+  &__title {
+    margin: 0.5rem 0;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__no-result {
+    text-align: center;
+    color: $color-white;
+    margin-top: 2rem;
+    font-family: "Comic Neue", cursive;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+    color: $color-white;
+    font-size: 0.9rem;
+
+    .movie__year {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-style: italic;
+      color: $color-white;
+
+      svg {
+        fill: $color-white;
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+      }
+    }
+
+    .movie__fav {
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+
+      svg {
+        fill: $color-white;
+        width: 22px;
+        height: 22px;
+        transition: fill 0.3s ease;
+      }
+    }
+  }
+}

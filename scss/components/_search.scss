@@ -1,0 +1,99 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.main {
+  padding-top: 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.search__container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+}
+.search {
+  border: 1px solid #f6c700;
+  display: flex;
+  padding: 2px 4px;
+  align-items: center;
+  background: #000;
+  align-items: center;
+  justify-content: center;
+
+  &__input {
+    color: #fff;
+    cursor: text;
+    display: inline-flex;
+    position: relative;
+    font-size: 1rem;
+    box-sizing: border-box;
+    align-items: center;
+    font-family: "Comic Neue", cursive;
+    font-weight: 400;
+    line-height: 1.1876em;
+    background-color: $color-black;
+    border: none;
+
+    &::placeholder {
+      font: inherit;
+      font-family: "Comic Neue", cursive;
+      color: $color-gray;
+      width: 100%;
+      border: 0;
+      height: 1.1876em;
+      margin: 0;
+      display: block;
+      padding: 6px 0 7px;
+      min-width: 0;
+      background: none;
+      box-sizing: content-box;
+      animation-name: mui-auto-fill-cancel;
+      letter-spacing: inherit;
+      animation-duration: 10ms;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__btn {
+    background: $color-black;
+    border: none;
+    padding: 0 0.75rem;
+    cursor: pointer;
+  }
+
+  &__icon {
+    fill: $color-white;
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    font-size: 1.5rem;
+    transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    flex-shrink: 0;
+    user-select: none;
+  }
+
+  @include respond(tablet) {
+    width: 300px;
+  }
+
+  @include respond(mobile) {
+    width: 90%;
+    font-size: 0.9rem;
+
+    &__icon {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
