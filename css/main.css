@@ -128,9 +128,13 @@ img {
 
 .movie {
   padding: 2rem;
+  display: flex;
+  justify-content: center;
 }
 .movie__grid {
   display: grid;
+  justify-content: center;
+  align-items: center;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
 }
@@ -148,8 +152,11 @@ img {
 .movie__card {
   position: relative;
   border-radius: 8px;
-  overflow: hidden;
   color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  min-height: 350px;
 }
 .movie__card::after {
   content: "";
@@ -160,6 +167,11 @@ img {
   height: 40%;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
   z-index: 1;
+}
+.movie__card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  z-index: 3;
 }
 .movie__poster {
   display: block;
@@ -210,6 +222,59 @@ img {
   width: 22px;
   height: 22px;
   transition: fill 0.3s ease;
+}
+.movie__no-result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: "Comic Neue", cursive;
+}
+.movie__skeleton {
+  background: #333;
+  border-radius: 8px;
+  animation: pulse 1.5s infinite ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  min-height: 350px;
+}
+.movie__skeleton-poster {
+  background: #555;
+  border-radius: 4px;
+  width: 100%;
+  height: 300px;
+}
+.movie__skeleton-title {
+  background: #666;
+  border-radius: 4px;
+  width: 70%;
+  height: 20px;
+}
+.movie__skeleton-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+.movie__skeleton-footer span,
+.movie__skeleton-footer button {
+  background: #666;
+  height: 20px;
+  width: 40px;
+  border-radius: 4px;
+}
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .main {

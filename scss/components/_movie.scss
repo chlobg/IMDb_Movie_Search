@@ -3,9 +3,13 @@
 
 .movie {
   padding: 2rem;
+  display: flex;
+  justify-content: center;
 
   &__grid {
     display: grid;
+    justify-content: center;
+    align-items: center;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
   }
@@ -23,6 +27,10 @@
     position: relative;
     border-radius: 8px;
     color: $color-white;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    min-height: 350px;
 
     &::after {
       content: "";
@@ -33,6 +41,12 @@
       height: 40%;
       background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
       z-index: 1;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+      z-index: 3;
     }
   }
 
@@ -92,6 +106,66 @@
         height: 22px;
         transition: fill 0.3s ease;
       }
+    }
+  }
+
+  &__no-result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-white;
+    font-family: "Comic Neue", cursive;
+  }
+
+  &__skeleton {
+    background: #333;
+    border-radius: 8px;
+    animation: pulse 1.5s infinite ease-in-out;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    min-height: 350px;
+
+    &-poster {
+      background: #555;
+      border-radius: 4px;
+      width: 100%;
+      height: 300px;
+    }
+
+    &-title {
+      background: #666;
+      border-radius: 4px;
+      width: 70%;
+      height: 20px;
+    }
+
+    &-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: auto;
+
+      span,
+      button {
+        background: #666;
+        height: 20px;
+        width: 40px;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  @keyframes pulse {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
     }
   }
 }
