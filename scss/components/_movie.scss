@@ -20,41 +20,52 @@
   }
 
   &__card {
-    background: $color-brown;
+    position: relative;
     border-radius: 8px;
-    overflow: hidden;
-    padding: 1rem;
     color: $color-white;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 40%;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+      z-index: 1;
+    }
   }
 
   &__poster {
-    border-radius: 4px;
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  &__title,
+  &__footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 0.5rem 1rem;
+    z-index: 2;
   }
 
   &__title {
-    margin: 0.5rem 0;
+    bottom: 2.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: $color-white;
   }
 
   &__footer {
+    bottom: 0.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-
-  &__no-result {
-    text-align: center;
-    color: $color-white;
-    margin-top: 2rem;
-    font-family: "Comic Neue", cursive;
-  }
-
-  &__footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 0.5rem;
-    color: $color-white;
     font-size: 0.9rem;
+    color: $color-white;
 
     .movie__year {
       display: flex;
@@ -67,7 +78,6 @@
         fill: $color-white;
         width: 20px;
         height: 20px;
-        flex-shrink: 0;
       }
     }
 
@@ -75,8 +85,6 @@
       background: none;
       border: none;
       cursor: pointer;
-      display: flex;
-      align-items: center;
 
       svg {
         fill: $color-white;
