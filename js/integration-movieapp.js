@@ -80,32 +80,43 @@ document.addEventListener("DOMContentLoaded", () => {
     movies.forEach((movie) => {
       const card = document.createElement("div");
       card.classList.add("movie__card");
+
+      const detailsPageUrl = `details.html?id=${movie.imdbID}`;
+
       card.innerHTML = `
-        <img src="${
-          movie.Poster !== "N/A"
-            ? movie.Poster
-            : "https://via.placeholder.com/200x300?text=No+Poster"
-        }" alt="${movie.Title}" class="movie__poster"/>
-        <h3 class="movie__title">${movie.Title}</h3>
-        <div class="movie__footer">
-          <span class="movie__year">
-            <svg viewBox="0 0 24 24"><path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 
-                     0-2 .9-2 2v16c0 1.1.9 2 2 
-                     2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 
-                     18H4V8h16v13z"></path></svg>
-            ${movie.Year}
-          </span>
-          <button class="movie__fav">
-            <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 
-                     15.36 2 12.28 2 8.5 2 5.42 4.42 
-                     3 7.5 3c1.74 0 3.41.81 4.5 
-                     2.09C13.09 3.81 14.76 3 16.5 3 
-                     19.58 3 22 5.42 22 8.5c0 
-                     3.78-3.4 6.86-8.55 11.54L12 
-                     21.35z"></path></svg>
-          </button>
-        </div>
-      `;
+      <img src="${
+        movie.Poster !== "N/A"
+          ? movie.Poster
+          : "https://via.placeholder.com/200x300?text=No+Poster"
+      }" alt="${movie.Title}" class="movie__poster"/>
+      
+      <!-- Titre cliquable qui mène vers la page de détails -->
+      <h3 class="movie__title">
+        <a href="${detailsPageUrl}" style="color:white; text-decoration:none;">
+          ${movie.Title}
+        </a>
+      </h3>
+
+      <div class="movie__footer">
+        <span class="movie__year">
+          <svg viewBox="0 0 24 24"><path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 
+                   0-2 .9-2 2v16c0 1.1.9 2 2 
+                   2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 
+                   18H4V8h16v13z"></path></svg>
+          ${movie.Year}
+        </span>
+        <button class="movie__fav">
+          <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 
+                   15.36 2 12.28 2 8.5 2 5.42 4.42 
+                   3 7.5 3c1.74 0 3.41.81 4.5 
+                   2.09C13.09 3.81 14.76 3 16.5 3 
+                   19.58 3 22 5.42 22 8.5c0 
+                   3.78-3.4 6.86-8.55 11.54L12 
+                   21.35z"></path></svg>
+        </button>
+      </div>
+    `;
+
       movieList.appendChild(card);
     });
   }
