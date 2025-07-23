@@ -45,7 +45,3 @@ Planned application structure:
 - Implement secure sign-in/sign-up functionality
 - Add user favorites/bookmarks
 - Introduce search filters (genre, year, ratings)
-
----
-
-Would you like me to include badges (e.g. GitHub Stars, License) or a "Getting Started" section next? I can also translate this version into French if needed. 🎯
