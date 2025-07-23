@@ -155,6 +155,10 @@
         border-radius: 4px;
       }
     }
+
+    &__no-result {
+      display: none;
+    }
   }
 
   @keyframes pulse {
