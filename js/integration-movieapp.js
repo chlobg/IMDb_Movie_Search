@@ -59,19 +59,19 @@ document.addEventListener("DOMContentLoaded", () => {
       isLoading = false;
     }
   }
-
   function showSkeletons(count = 10) {
+    noResult.style.display = "none";
     for (let i = 0; i < count; i++) {
       const skeleton = document.createElement("div");
       skeleton.classList.add("movie__skeleton");
       skeleton.innerHTML = `
-        <div class="movie__skeleton-poster"></div>
-        <div class="movie__skeleton-title"></div>
-        <div class="movie__skeleton-footer">
-          <span></span>
-          <button></button>
-        </div>
-      `;
+      <div class="movie__skeleton-poster"></div>
+      <div class="movie__skeleton-title"></div>
+      <div class="movie__skeleton-footer">
+        <span></span>
+        <button></button>
+      </div>
+    `;
       movieList.appendChild(skeleton);
     }
   }

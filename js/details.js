@@ -21,27 +21,50 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     detailsContainer.innerHTML = `
-      <div class="details__poster">
-        <img src="${
-          movie.Poster !== "N/A"
-            ? movie.Poster
-            : "https://via.placeholder.com/300x450?text=No+Poster"
-        }" alt="${movie.Title}" />
-      </div>
-      <div class="details__info">
-        <h1>${movie.Title}</h1>
-        <p>${movie.Year} | ${movie.Reates} | ${movie.Released} | ${
+ 
+        <!-- Poster -->
+        <div class="details__poster">
+          <img src="${
+            movie.Poster !== "N/A"
+              ? movie.Poster
+              : "https://via.placeholder.com/300x450?text=No+Poster"
+          }" alt="${movie.Title}" />
+        </div>
+
+        <!-- Contenu -->
+        <div class="details__content">
+          <div class="details__header">
+            <h1 class="details__title">${movie.Title}</h1>
+            <div class="details__rating">
+              <svg class="details__star" viewBox="0 0 24 24">
+                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24
+                         l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46
+                         4.73L5.82 21z"></path>
+              </svg>
+              <span class="details__score">${movie.imdbRating}/10</span>
+              <span class="details__votes">${movie.imdbVotes}</span>
+            </div>
+          </div>
+
+          <p class="details__meta">
+            ${movie.Year} | ${movie.Rated} | ${movie.Released} | ${
       movie.Runtime
-    }</p>
-        <p>${movie.Plot}</p>
-        <p><strong>Genre :</strong> ${movie.Genre}</p>
-        <p><strong>Director :</strong> ${movie.Director}</p>
-         <p><strong>Writer :</strong> ${movie.Writer}</p>
-        <p><strong>Actors :</strong> ${movie.Actors}</p>
-        <p><strong>Languages :</strong> ${movie.Langauge}</p>
-        <p><strong>Country :</strong> ${movie.Country}</p>
-        <p><strong>Awards :</strong> ${movie.Awards}</p>
-        <p><strong>Production :</strong> ${movie.Production}</p>
+    }
+          </p>
+
+          <p class="details__plot">${movie.Plot}</p>
+
+          <dl class="details__info-list">
+            <dt>Genre :</dt><dd>${movie.Genre}</dd>
+            <dt>Director :</dt><dd>${movie.Director}</dd>
+            <dt>Writer :</dt><dd>${movie.Writer}</dd>
+            <dt>Actors :</dt><dd>${movie.Actors}</dd>
+            <dt>Language :</dt><dd>${movie.Language}</dd>
+            <dt>Country :</dt><dd>${movie.Country}</dd>
+            <dt>Awards :</dt><dd>${movie.Awards}</dd>
+            <dt>Production :</dt><dd>${movie.Production || "N/A"}</dd>
+          </dl>
+        </div>
       </div>
     `;
   } catch (error) {
