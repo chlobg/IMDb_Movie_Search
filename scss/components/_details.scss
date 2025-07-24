@@ -22,7 +22,6 @@
   }
 
   &__back {
-    position: absolute;
     top: 1rem;
     left: -2rem;
     font-size: 3rem;
@@ -52,11 +51,15 @@
     justify-content: space-between;
     align-items: flex-start;
     gap: 1rem;
+    gap: 1rem;
+    gap: 1rem;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
   }
 
   &__title {
     font-size: 2rem;
-    font-weight: bold;
     flex: 1;
     white-space: nowrap;
     overflow: hidden;
