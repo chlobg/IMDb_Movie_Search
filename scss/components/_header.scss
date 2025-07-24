@@ -21,7 +21,6 @@
     height: 48px;
 
     @include respond(mobile) {
-      height: 30px;
       align-items: center;
     }
   }

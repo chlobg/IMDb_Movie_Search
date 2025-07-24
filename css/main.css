@@ -36,7 +36,6 @@ img {
 }
 @media (max-width: 430px) {
   .header__logo {
-    height: 30px;
     align-items: center;
   }
 }
