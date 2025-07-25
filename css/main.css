@@ -216,6 +216,7 @@ img {
   background: none;
   border: none;
   cursor: pointer;
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 .movie__footer .movie__fav svg {
   fill: #fff;
@@ -314,6 +315,8 @@ img {
 @media (max-width: 430px) {
   .details__container {
     grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     text-align: center;
   }
 }
@@ -321,6 +324,7 @@ img {
   top: 1rem;
   left: -2rem;
   font-size: 3rem;
+  padding: 12px;
   background: none;
   border: none;
   color: #fff;
@@ -328,6 +332,9 @@ img {
 }
 .details__back:hover {
   color: #f6c700;
+}
+.details__logo {
+  height: 48px;
 }
 .details__poster img {
   width: 100%;
@@ -340,17 +347,15 @@ img {
 }
 .details__header {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
   gap: 1rem;
   gap: 1rem;
   gap: 1rem;
   gap: 1rem;
-  display: flex;
-  flex-direction: column;
 }
 .details__title {
-  font-size: 2rem;
+  font-size: 2.4rem;
   flex: 1;
   white-space: nowrap;
   overflow: hidden;
@@ -362,10 +367,14 @@ img {
   gap: 0.3rem;
   font-size: 1.1rem;
 }
+.details__rating .div {
+  display: flex;
+  flex-direction: column;
+}
 .details__star {
   fill: #f6c700;
-  width: 20px;
-  height: 20px;
+  width: 35px;
+  height: 35px;
 }
 .details__score {
   color: #f6c700;

@@ -34,15 +34,19 @@ document.addEventListener("DOMContentLoaded", async () => {
         <!-- Contenu -->
         <div class="details__content">
           <div class="details__header">
-            <h1 class="details__title">${movie.Title}</h1>
+            <div class="details__title">${movie.Title}</div>
             <div class="details__rating">
               <svg class="details__star" viewBox="0 0 24 24">
                 <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24
                          l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46
                          4.73L5.82 21z"></path>
               </svg>
+              <div style="    display: flex
+;
+    flex-direction: column;">
               <span class="details__score">${movie.imdbRating}/10</span>
               <span class="details__votes">${movie.imdbVotes}</span>
+              </div>
             </div>
           </div>
 

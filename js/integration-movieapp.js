@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } catch (error) {
       console.error("Erreur lors du chargement :", error);
       noResult.style.display = "block";
-      noResult.textContent = "Erreur lors du chargement des films.";
+      noResult.textContent = "Movie not found!";
     } finally {
       isLoading = false;
     }

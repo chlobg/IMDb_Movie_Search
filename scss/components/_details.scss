@@ -17,6 +17,8 @@
 
     @include respond(mobile) {
       grid-template-columns: 1fr;
+      display: flex;
+      flex-direction: column;
       text-align: center;
     }
   }
@@ -25,6 +27,7 @@
     top: 1rem;
     left: -2rem;
     font-size: 3rem;
+    padding: 12px;
     background: none;
     border: none;
     color: $color-white;
@@ -33,6 +36,10 @@
     &:hover {
       color: $color-yellow;
     }
+  }
+
+  &__logo {
+    height: 48px;
   }
 
   &__poster img {
@@ -48,18 +55,16 @@
 
   &__header {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
     gap: 1rem;
     gap: 1rem;
     gap: 1rem;
     gap: 1rem;
-    display: flex;
-    flex-direction: column;
   }
 
   &__title {
-    font-size: 2rem;
+    font-size: 2.4rem;
     flex: 1;
     white-space: nowrap;
     overflow: hidden;
@@ -71,12 +76,17 @@
     align-items: center;
     gap: 0.3rem;
     font-size: 1.1rem;
+
+    .div {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__star {
     fill: $color-yellow;
-    width: 20px;
-    height: 20px;
+    width: 35px;
+    height: 35px;
   }
 
   &__score {
