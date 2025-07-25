@@ -4,6 +4,9 @@
 .header {
   background-color: $color-black;
   padding: 12px 32px;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
 
   &__container {
     display: flex;
