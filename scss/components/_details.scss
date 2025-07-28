@@ -17,16 +17,20 @@
 
     @include respond(mobile) {
       grid-template-columns: 1fr;
-      display: flex;
+      /*display: flex;*/
+      width: 100%;
+      display: unset;
       flex-direction: column;
     }
   }
 
   &__back {
-    top: 1rem;
-    left: -2rem;
-    font-size: 3rem;
+    /*position: absolute;*/
+    top: -60px;
+    left: 1rem;
+    font-size: 1.5rem;
     padding: 12px;
+    /*width: 100%;*/
     background: none;
     border: none;
     color: $color-white;
@@ -35,10 +39,6 @@
     &:hover {
       color: $color-yellow;
     }
-  }
-
-  &__logo {
-    height: 48px;
   }
 
   &__poster img {
@@ -56,9 +56,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 1rem;
-    gap: 1rem;
-    gap: 1rem;
     gap: 1rem;
   }
 
