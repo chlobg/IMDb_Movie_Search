@@ -11,17 +11,17 @@
     align-items: center;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
-  }
+    @include respond(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
 
-  @include respond(tablet) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @include respond(mobile) {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 0.5rem;
-    justify-content: center;
-    flex-direction: column;
+    @include respond(mobile) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 0.5rem;
+      justify-content: center;
+      flex-direction: column;
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &__card {
